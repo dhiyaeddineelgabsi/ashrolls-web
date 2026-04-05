@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#3EC8D4"/>
+  <text x="50%" y="55%" dominant-baseline="middle"
+    text-anchor="middle" font-family="Arial" font-weight="bold"
+    font-size="26" fill="white">AR</text>
+</svg>

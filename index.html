@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASHROLLS — Gelaterie artisanale à Djerba</title>
+
+  <meta name="description" content="ASHROLLS — Gelaterie artisanale à Djerba, Houmet Souk. Ice Rolls, Jwajem, Cheesecakes, Pastries, Smoothies. Roll It Your Way!">
+  <meta property="og:title" content="ASHROLLS — Gelaterie Djerba">
+  <meta property="og:description" content="Ice Rolls artisanaux, Jwajem, Cheesecakes & plus. Venez nous rendre visite à Houmet Souk!">
+  <meta property="og:image" content="og-image.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">ASHROLLS</a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">☰</button>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <span id="statusBadge" class="status-badge">Vérification...</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero decorative-bg">
+      <div class="container hero-content">
+        <h1>Roll It Your Way!</h1>
+        <p>La gelaterie artisanale qui rafraîchit Djerba 🍦 Créations fun, fraîches et personnalisables à Houmet Souk.</p>
+        <a href="menu.html" class="btn btn-primary">Découvrir notre menu</a>
+      </div>
+      <span class="float-emoji e1">🍦</span>
+      <span class="float-emoji e2">🍓</span>
+      <span class="float-emoji e3">❄️</span>
+    </section>
+
+    <section class="section-light decorative-bg">
+      <div class="container">
+        <h2>Pourquoi ASHROLLS ?</h2>
+        <div class="card-grid">
+          <article class="card reveal">
+            <h3>Fait maison</h3>
+            <p>Des recettes artisanales préparées avec amour, chaque jour.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Ingrédients frais</h3>
+            <p>Fruits de saison, toppings premium, qualité au rendez-vous.</p>
+          </article>
+          <article class="card reveal">
+            <h3>100% personnalisable</h3>
+            <p>Compose ton roll ou ta coupe selon tes envies gourmandes.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Livraison</h3>
+            <p>Savoure ASHROLLS où tu veux, quand tu veux à Djerba.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-white">
+      <div class="container">
+        <h2>Nos Spécialités</h2>
+        <div class="special-grid">
+          <article class="special-card reveal">
+            <h3>Ice Roll Large Cup</h3>
+            <p>Notre glace roulée signature en grand format.</p>
+            <strong>8DT</strong>
+          </article>
+          <article class="special-card reveal">
+            <h3>Jwajem Spéciale Ash</h3>
+            <p>La recette maison la plus généreuse et la plus iconique.</p>
+            <strong>18DT</strong>
+          </article>
+          <article class="special-card reveal">
+            <h3>Cheesecake San Sebastien</h3>
+            <p>Fondant, crémeux, irrésistible — une vraie pause plaisir.</p>
+            <strong>10DT</strong>
+          </article>
+        </div>
+        <div class="center mt-lg">
+          <a href="menu.html" class="btn btn-secondary">Voir tout le menu</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://wa.me/21620229964" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <span>💬</span>
+    <em class="tooltip">Contactez-nous</em>
+  </a>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>ASHROLLS — Houmet Souk, Djerba, Tunisie</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/_ashrolls_/?hl=fr" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+      </div>
+      <p>© 2026 ASHROLLS. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    function updateStatusBadge() {
+      const now = new Date();
+      const tunisiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Africa/Tunis" }));
+      const hour = tunisiaTime.getHours();
+      const minute = tunisiaTime.getMinutes();
+      const totalMinutes = hour * 60 + minute;
+      const isOpen = totalMinutes >= 780 && totalMinutes < 1440;
+      const badge = document.getElementById("statusBadge");
+
+      if (isOpen) {
+        badge.textContent = "🟢 Ouvert maintenant";
+        badge.classList.add("open");
+        badge.classList.remove("closed");
+      } else {
+        badge.textContent = "🔴 Fermé";
+        badge.classList.add("closed");
+        badge.classList.remove("open");
+      }
+    }
+
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav");
+    hamburger.addEventListener("click", () => nav.classList.toggle("show"));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    updateStatusBadge();
+    setInterval(updateStatusBadge, 60000);
+  </script>
+</body>
+</html>
