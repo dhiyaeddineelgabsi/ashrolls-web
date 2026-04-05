@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASHROLLS — Contact</title>
+
+  <meta name="description" content="ASHROLLS — Gelaterie artisanale à Djerba, Houmet Souk. Ice Rolls, Jwajem, Cheesecakes, Pastries, Smoothies. Roll It Your Way!">
+  <meta property="og:title" content="ASHROLLS — Gelaterie Djerba">
+  <meta property="og:description" content="Ice Rolls artisanaux, Jwajem, Cheesecakes & plus. Venez nous rendre visite à Houmet Souk!">
+  <meta property="og:image" content="og-image.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">ASHROLLS</a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">☰</button>
+      <nav class="nav" id="nav">
+        <a href="index.html">Accueil</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <span id="statusBadge" class="status-badge">Vérification...</span>
+    </div>
+  </header>
+
+  <main class="section-white decorative-bg">
+    <div class="container contact-grid">
+      <section class="contact-card reveal">
+        <h2>Infos pratiques</h2>
+        <p><strong>Adresse :</strong> Ashrolls, Houmet Souk, Djerba, Tunisie</p>
+
+        <div class="opening-box">
+          <h3>Horaires d'ouverture</h3>
+          <p>Tous les jours (Dimanche au Samedi) : 13h00 – 00h00</p>
+          <small>Les horaires peuvent varier les jours fériés</small>
+        </div>
+
+        <div class="contact-actions">
+          <button id="callBtn" class="btn btn-secondary">📞 Nous appeler</button>
+          <a href="https://maps.app.goo.gl/465KFEmMxDSEcBDW9" target="_blank" rel="noopener" class="btn btn-primary">📍 Nous trouver</a>
+        </div>
+
+        <div class="socials contact-socials mt-md">
+          <a href="https://www.instagram.com/_ashrolls_/?hl=fr">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TikTok</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="container map-wrap reveal">
+      <iframe
+        src="https://www.google.com/maps?q=33.875436,10.8674224&z=17&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+      </iframe>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="callModal">
+    <div class="modal">
+      <button class="close-modal" id="closeModal">✕</button>
+      <h3>Choisissez un numero</h3>
+      <div class="phone-chooser" id="phoneChooser">
+        <label class="phone-option">
+          <input type="radio" name="selectedPhone" value="21620229964" checked>
+          <span>+216 20 229 964</span>
+        </label>
+        <label class="phone-option">
+          <input type="radio" name="selectedPhone" value="21692950656">
+          <span>+216 92 950 656</span>
+        </label>
+      </div>
+      <div class="modal-actions">
+        <a id="callSelectedLink" href="tel:+21620229964" class="btn btn-secondary">Appeler</a>
+        <a id="whatsappSelectedLink" href="https://wa.me/21620229964" target="_blank" rel="noopener" class="btn btn-primary">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" id="whatsappFloatBtn" class="whatsapp-float" aria-label="WhatsApp">
+    <span>💬</span>
+  </button>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>ASHROLLS — Houmet Souk, Djerba, Tunisie</p>
+      <div class="socials"><a href="https://www.instagram.com/_ashrolls_/?hl=fr">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+      <p>© 2026 ASHROLLS. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    function updateStatusBadge() {
+      const now = new Date();
+      const tunisiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Africa/Tunis" }));
+      const hour = tunisiaTime.getHours();
+      const minute = tunisiaTime.getMinutes();
+      const totalMinutes = hour * 60 + minute;
+      const isOpen = totalMinutes >= 780 && totalMinutes < 1440;
+      const badge = document.getElementById("statusBadge");
+      badge.textContent = isOpen ? "🟢 Ouvert maintenant" : "🔴 Fermé";
+      badge.classList.toggle("open", isOpen);
+      badge.classList.toggle("closed", !isOpen);
+    }
+
+    document.getElementById("hamburger").addEventListener("click", () => {
+      document.getElementById("nav").classList.toggle("show");
+    });
+
+    const modal = document.getElementById("callModal");
+    document.getElementById("callBtn").addEventListener("click", () => modal.classList.add("show"));
+    document.getElementById("whatsappFloatBtn").addEventListener("click", () => modal.classList.add("show"));
+    document.getElementById("closeModal").addEventListener("click", () => modal.classList.remove("show"));
+    modal.addEventListener("click", (e) => { if (e.target === modal) modal.classList.remove("show"); });
+
+    const phoneOptions = document.querySelectorAll('input[name="selectedPhone"]');
+    const callSelectedLink = document.getElementById("callSelectedLink");
+    const whatsappSelectedLink = document.getElementById("whatsappSelectedLink");
+
+    function updateSelectedPhoneActions(phone) {
+      callSelectedLink.href = `tel:+${phone}`;
+      whatsappSelectedLink.href = `https://wa.me/${phone}`;
+    }
+
+    phoneOptions.forEach(option => {
+      option.addEventListener("change", () => updateSelectedPhoneActions(option.value));
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => entry.isIntersecting && entry.target.classList.add("visible"));
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    updateStatusBadge();
+    setInterval(updateStatusBadge, 60000);
+  </script>
+</body>
+</html>
