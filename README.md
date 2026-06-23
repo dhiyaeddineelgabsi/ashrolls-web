@@ -4,9 +4,7 @@
 
 Site vitrine statique (HTML / CSS / JS natif) présentant la gelaterie, son menu et ses informations de contact. Aucun framework, aucun build, aucune dépendance — déployable en un clic.
 
-🔗 **Lien Vercel (démo en ligne) :**
-
-> _Vercel URL à insérer ici — `https://ashrolls-web.vercel.app`_
+🔗 **Lien Vercel (démo en ligne) :** https://ashrolls-web.vercel.app
 
 ---
 
