@@ -24,7 +24,11 @@ ashrolls web/
 ├── menu.html         → Menu complet avec filtres par catégorie
 ├── contact.html      → Coordonnées, horaires, carte Google Maps, modal d'appel
 ├── style.css         → Feuille de style unique (design system + responsive)
+├── main.js           → Scripts communs (badge d'ouverture, hamburger, animations)
 ├── favicon.svg        → Favicon SVG (logo "AR" sur fond turquoise)
+├── og-image.png      → Image de partage (Open Graph) pour WhatsApp/Facebook
+├── robots.txt        → Directives pour les moteurs de recherche
+├── sitemap.xml       → Plan du site pour le SEO
 ├── DOCUMENTATION.md  → Ce fichier (description complète du projet)
 └── README.md         → README du dépôt
 ```
@@ -108,15 +112,18 @@ Aucun dossier `assets/`, `js/` ou `images/` n'existe pour le moment : les script
 
 ---
 
-## 5. Fonctionnalités JavaScript (inline)
+## 5. Fonctionnalités JavaScript
 
-Chaque page contient un bloc `<script>` natif (aucune dépendance externe) :
+Les scripts communs à toutes les pages sont centralisés dans **`main.js`** (inclus via `<script src="main.js"></script>`) :
 
 1. **`updateStatusBadge()`** : calcule l'heure en Tunisie (`Africa/Tunis`) et affiche 🟢 Ouvert (13h00 – 00h00) / 🔴 Fermé. Rafraîchi toutes les 60 s.
 2. **Menu hamburger** : toggle de la classe `.show` sur la nav.
-3. **Filtres menu** (`menu.html`) : filtrage des cartes par `data-category`.
-4. **Modal d'appel** (`contact.html`) : ouverture/fermeture, choix du numéro, mise à jour dynamique des liens `tel:` et `wa.me`.
-5. **IntersectionObserver** : révèle les éléments `.reveal` au scroll.
+3. **IntersectionObserver** : révèle les éléments `.reveal` au scroll.
+
+Scripts spécifiques conservés inline dans leur page :
+
+4. **Filtres menu** (`menu.html`) : filtrage des cartes par `data-category`.
+5. **Modal d'appel** (`contact.html`) : ouverture/fermeture, choix du numéro, mise à jour dynamique des liens `tel:` et `wa.me`.
 
 ---
 

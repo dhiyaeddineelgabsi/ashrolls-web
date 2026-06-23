@@ -114,41 +114,6 @@
     </div>
   </footer>
 
-  <script>
-    function updateStatusBadge() {
-      const now = new Date();
-      const tunisiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Africa/Tunis" }));
-      const hour = tunisiaTime.getHours();
-      const minute = tunisiaTime.getMinutes();
-      const totalMinutes = hour * 60 + minute;
-      const isOpen = totalMinutes >= 780 && totalMinutes < 1440;
-      const badge = document.getElementById("statusBadge");
-
-      if (isOpen) {
-        badge.textContent = "🟢 Ouvert maintenant";
-        badge.classList.add("open");
-        badge.classList.remove("closed");
-      } else {
-        badge.textContent = "🔴 Fermé";
-        badge.classList.add("closed");
-        badge.classList.remove("open");
-      }
-    }
-
-    const hamburger = document.getElementById("hamburger");
-    const nav = document.getElementById("nav");
-    hamburger.addEventListener("click", () => nav.classList.toggle("show"));
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-    updateStatusBadge();
-    setInterval(updateStatusBadge, 60000);
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

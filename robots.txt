@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ashrolls-web.vercel.app/sitemap.xml

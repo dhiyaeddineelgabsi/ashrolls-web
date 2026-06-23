@@ -1,0 +1,76 @@
+Category,Subcategory,Item,Size/Variant,Quantity,Price (DT),Notes
+ICE ROLL,Sizes,Ice Roll,Mini Cup,,5,
+ICE ROLL,Sizes,Ice Roll,Medium Cup,,6,
+ICE ROLL,Sizes,Ice Roll,Large Cup,,8,Supplément +2 DT
+ICE ROLL,Barre de Chocolat,KitKat,,,+2 (supplément),Flavour option
+ICE ROLL,Barre de Chocolat,Nutella,,,+2 (supplément),Flavour option
+ICE ROLL,Barre de Chocolat,Snickers,,,+2 (supplément),Flavour option
+ICE ROLL,Barre de Chocolat,Morjen,,,+2 (supplément),Flavour option
+ICE ROLL,Barre de Chocolat,Raffaello,,,+2 (supplément),Flavour option
+ICE ROLL,Barre de Chocolat,Lotus,,,+2 (supplément),Flavour option
+ICE ROLL,Barre de Chocolat,Twix,,,+2 (supplément),Flavour option
+ICE ROLL,Barre de Chocolat,Ferrero,,,+2 (supplément),Flavour option
+ICE ROLL,Barre de Chocolat,M&M's,,,+2 (supplément),Flavour option
+ICE ROLL,Barre de Chocolat,Mars,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits de Saison,Fraise,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits de Saison,Kiwi,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits de Saison,Banane,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits de Saison,Dattes,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits de Saison,Citron,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits de Saison,Menthe,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits Secs,Amande,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits Secs,Noisette,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits Secs,Noix de Cajou,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits Secs,Pistache,,,+2 (supplément),Flavour option
+ICE ROLL,Naturel - Fruits Secs,Mixte,,,+2 (supplément),Highlighted option
+PASTRIES,Mini-Pancake,Saghroun box,,5 pcs,5,
+PASTRIES,Mini-Pancake,Medium box,,10 pcs,8,
+PASTRIES,Mini-Pancake,Large box,,15 pcs,10,
+PASTRIES,Mini-Pancake,Spéciale,,20 pcs,19,Fruits de saison + 3 chocolats au choix + fruits secs - Supplément +2 DT
+PASTRIES,Ash Cup,Classic Ash Cup,,,8,Supplément +2 DT
+PASTRIES,Ash Cup,Fruit Ash Cup,,,10,Supplément +2 DT
+PASTRIES,Ash Cup,Chocolat Ash Cup,,,11,Supplément +2 DT
+PASTRIES,Ash Cup - Toppings,Nutella,,,Inclus,Topping option
+PASTRIES,Ash Cup - Toppings,Lotus,,,Inclus,Topping option
+PASTRIES,Ash Cup - Toppings,Morjen,,,Inclus,Topping option
+PASTRIES,Ash Cup - Toppings,Choco.blanc,,,Inclus,Topping option
+PASTRIES,Ash Cup - Toppings,Choco.noir,,,Inclus,Topping option
+PASTRIES,Ash Cup - Toppings,Pistache,,,Inclus,Topping option
+PASTRIES,Ash Cup - Toppings,Oreo,,,Inclus,Topping option
+PASTRIES,Ash Cup - Toppings,Café,,,Inclus,Topping option
+PASTRIES,Ash Cup - Toppings,Caramel,,,Inclus,Topping option
+PASTRIES,Ash Cup - Toppings,Fruits secs,,,Inclus,Topping option
+PASTRIES,Boule Bastique,Boule Bastique,Mini Box,7 Boules,8,
+PASTRIES,Boule Bastique,Boule Bastique,Medium Box,14 Boules,13,
+PASTRIES,Boule Bastique,Boule Bastique,Large Box,21 Boules,17.5,
+REFRESHING DRINKS,Jus & Cocktails,Jus de Fraise,,,5,
+REFRESHING DRINKS,Jus & Cocktails,Citronnade,,,3,
+REFRESHING DRINKS,Jus & Cocktails,Virgin Mojito,,,5,
+REFRESHING DRINKS,Jus & Cocktails,"Blue" Mojito,,,6,
+REFRESHING DRINKS,Jus & Cocktails,"Red" Mojito,,,7,
+REFRESHING DRINKS,Jus & Cocktails,Pomegranate.M,,,7,
+REFRESHING DRINKS,Jus & Cocktails,Pinacolada,,,7,
+DRINKS,Hot & Cold,Frapuccino,,,7,
+DRINKS,Hot & Cold,Lait de Poule,,,5,
+DRINKS,Hot & Cold,Milkshake,,,8,Par choix
+DRINKS,Hot & Cold,Milk.Nutella,,,10,
+DRINKS,Smoothies,Smoothie Fruits,,,6,Fruits de saison
+DRINKS,Smoothies,Smoothie Fruits Secs,,,7.5,
+DRINKS,Café & Eau,Nespresso,,,3.5,
+DRINKS,Café & Eau,Café Crème,,,4,
+DRINKS,Café & Eau,Eau,0.5L,,1,
+CHEESECAKES,,San Sebastien,,,10,Supplément +2 DT - Glaçage chocolat noir & pistache
+CHEESECAKES,,Cheese-Dubai,,,9,Format cup - crème en couches
+JWAJEM,,Classic Jwajem,,,7,
+JWAJEM,,Nutella,,,10,
+JWAJEM,,Lotus,,,10,
+JWAJEM,,Danette,,,9,
+JWAJEM,,Overdose,,,11.5,
+JWAJEM,,Ferrero,,,11,
+JWAJEM,,Raffaelo,,,11,
+JWAJEM,,Kinder,,,12,
+JWAJEM,,Morjen,,,10,
+JWAJEM,,Pistache,,,14,
+JWAJEM,,Chocolat Blanc & Caramel,,,11,
+JWAJEM,,Spéciale Ash,,,18,
+BRAND INFO,,,,,,"Nom: AshRolls | Tagline: Roll It Your Way! | Couleur principale: Turquoise (#3BB8C3) | Accent: Orange/Or | Texte: Bleu marine | Typographie: Cursive (titres) + Bold Display (grands titres) + Semi-bold Sans-serif (items)"

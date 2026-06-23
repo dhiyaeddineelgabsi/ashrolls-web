@@ -60,7 +60,11 @@ ashrolls web/
 ├── menu.html
 ├── contact.html
 ├── style.css
+├── main.js
 ├── favicon.svg
+├── og-image.png
+├── robots.txt
+├── sitemap.xml
 ├── DOCUMENTATION.md   → Description détaillée du projet
 └── README.md
 ```

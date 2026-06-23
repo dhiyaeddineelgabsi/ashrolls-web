@@ -61,7 +61,8 @@
     <div class="container map-wrap reveal">
       <iframe
         src="https://www.google.com/maps?q=33.875436,10.8674224&z=17&output=embed"
-        width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+        width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"
+        title="Localisation ASHROLLS sur Google Maps">
       </iframe>
     </div>
   </main>
@@ -99,24 +100,8 @@
     </div>
   </footer>
 
+  <script src="main.js"></script>
   <script>
-    function updateStatusBadge() {
-      const now = new Date();
-      const tunisiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Africa/Tunis" }));
-      const hour = tunisiaTime.getHours();
-      const minute = tunisiaTime.getMinutes();
-      const totalMinutes = hour * 60 + minute;
-      const isOpen = totalMinutes >= 780 && totalMinutes < 1440;
-      const badge = document.getElementById("statusBadge");
-      badge.textContent = isOpen ? "🟢 Ouvert maintenant" : "🔴 Fermé";
-      badge.classList.toggle("open", isOpen);
-      badge.classList.toggle("closed", !isOpen);
-    }
-
-    document.getElementById("hamburger").addEventListener("click", () => {
-      document.getElementById("nav").classList.toggle("show");
-    });
-
     const modal = document.getElementById("callModal");
     document.getElementById("callBtn").addEventListener("click", () => modal.classList.add("show"));
     document.getElementById("whatsappFloatBtn").addEventListener("click", () => modal.classList.add("show"));
@@ -135,14 +120,6 @@
     phoneOptions.forEach(option => {
       option.addEventListener("change", () => updateSelectedPhoneActions(option.value));
     });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => entry.isIntersecting && entry.target.classList.add("visible"));
-    }, { threshold: 0.15 });
-    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-    updateStatusBadge();
-    setInterval(updateStatusBadge, 60000);
   </script>
 </body>
 </html>
