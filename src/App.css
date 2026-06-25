@@ -196,6 +196,48 @@ h3{font-size:1.25rem}
 .reveal{opacity:0;transform:translateY(18px);transition:all .7s ease}
 .reveal.visible{opacity:1;transform:none}
 
+.options-section{
+  margin-top:2.2rem;
+  padding-top:1.6rem;
+  border-top:2px dashed #d0f0f4;
+}
+.options-title{
+  font-family:'Baloo 2',cursive;
+  color:var(--navy);
+  font-size:1.15rem;
+  margin-bottom:.9rem;
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+}
+.options-grid{
+  display:grid;
+  gap:.8rem;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+}
+.option-card{
+  background:#f0fbfc;
+  border:1px solid #d0f0f4;
+  border-radius:14px;
+  padding:.9rem 1rem;
+  transition:transform .28s ease, box-shadow .28s ease;
+}
+.option-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+.option-card h3{font-size:1.05rem;margin-bottom:.25rem}
+.option-card p{font-size:.9rem;color:#4a6572;margin-bottom:.45rem}
+.option-badge{
+  display:inline-block;
+  padding:.22rem .65rem;
+  border-radius:999px;
+  background:#dbf6e2;
+  color:#16773a;
+  font-size:.76rem;
+  font-weight:700;
+}
+
 @media (max-width:860px){
   .hamburger{display:block}
   .nav{
