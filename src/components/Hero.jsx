@@ -4,6 +4,7 @@ export default function Hero() {
   return (
     <section className="hero decorative-bg">
       <div className="container hero-content">
+        <img src="/logo.jpg" alt="ASHROLLS" className="hero-logo" />
         <h1>Roll It Your Way!</h1>
         <p>La gelaterie artisanale qui rafraîchit Djerba 🍦 Créations fun, fraîches et personnalisables à Houmet Souk.</p>
         <Link to="/menu" className="btn btn-primary">Découvrir notre menu</Link>

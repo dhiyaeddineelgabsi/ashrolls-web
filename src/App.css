@@ -38,12 +38,7 @@ h3{font-size:1.25rem}
   display:flex;align-items:center;justify-content:space-between;
   gap:1rem;padding:.8rem 0;
 }
-.logo{
-  font-family:'Baloo 2',cursive;
-  font-size:1.8rem;font-weight:800;
-  color:var(--turquoise);text-decoration:none;line-height:1;
-}
-.nav{display:flex;gap:1rem;align-items:center}
+.nav{display:flex;gap:1rem;align-items:center;margin:0 auto}
 .nav a{text-decoration:none;color:var(--navy);font-weight:600}
 .nav a.active,.nav a:hover{color:var(--turquoise)}
 .hamburger{
@@ -55,6 +50,7 @@ h3{font-size:1.25rem}
 }
 .status-badge.open{background:#dbf6e2;color:#16773a}
 .status-badge.closed{background:#ffe1e1;color:#a52424}
+.status-icon{display:none}
 
 .hero{
   min-height:72vh;display:grid;place-items:center;position:relative;
@@ -62,6 +58,13 @@ h3{font-size:1.25rem}
   overflow:hidden;
 }
 .hero-content{text-align:center;padding:4rem 0}
+.hero-logo{
+  width:clamp(120px,18vw,170px);height:auto;
+  border-radius:24px;
+  border:4px solid #fff;
+  box-shadow:0 10px 26px rgba(26,58,92,.16),0 0 0 2px rgba(62,200,212,.35);
+  margin-bottom:1.1rem;
+}
 .hero p{max-width:650px;margin:1rem auto 1.4rem}
 
 .float-emoji{position:absolute;font-size:2rem;animation:float 4s ease-in-out infinite}
@@ -186,81 +189,83 @@ h3{font-size:1.25rem}
 
 @media (max-width:860px){
   .hamburger{display:none}
+  .nav-wrap{
+    position:relative;justify-content:flex-start;
+    padding:.8rem 0;
+  }
   .nav{
-    display:flex;flex-direction:row;gap:.9rem;align-items:center;
-    position:static;background:none;border:none;border-radius:0;padding:0;
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    display:flex;flex-direction:row;gap:.9rem;align-items:center;justify-content:center;
+    background:none;border:none;border-radius:0;padding:0;margin:0;
   }
   .nav a{font-size:.9rem;white-space:nowrap}
-  .status-badge{font-size:.72rem}
+  .status-badge{
+    position:absolute;right:0;top:50%;transform:translateY(-50%);
+    font-size:.72rem;padding:.28rem .55rem;line-height:1.2;
+  }
+  .status-text{display:none}
+  .status-icon{display:inline}
 }
 
 @media (max-width:430px){
-  .logo{font-size:1.35rem}
   .nav{gap:.65rem}
   .nav a{font-size:.78rem}
-  .status-badge{display:none}
+  .status-badge{font-size:.85rem;padding:.32rem .5rem}
 }
 
-/* ============ Page Menu — thème ardoise (chalkboard) ============ */
+/* ============ Page Menu — thème clair (cohérent avec le site) ============ */
 .menu-board{
   padding:3rem 0 4.5rem;
-  color:#f3f1ea;
-  background-color:#1b1b20;
-  background-image:
-    radial-gradient(ellipse at 15% 8%,rgba(255,255,255,.05),transparent 42%),
-    radial-gradient(ellipse at 85% 30%,rgba(255,255,255,.035),transparent 40%),
-    repeating-linear-gradient(90deg,rgba(255,255,255,.014) 0 2px,transparent 2px 9px),
-    repeating-linear-gradient(0deg,rgba(0,0,0,.14) 0 3px,transparent 3px 26px);
-  box-shadow:inset 0 0 120px rgba(0,0,0,.55);
+  color:var(--text);
+  background:#e9fbfd;
 }
 .board-title{
-  color:#fff;text-align:center;margin:0 0 .3rem;
-  text-shadow:0 2px 0 rgba(0,0,0,.4);
+  color:var(--navy);text-align:center;margin:0 0 .3rem;
 }
 .board-subtitle{
-  text-align:center;color:rgba(255,255,255,.55);
+  text-align:center;color:#5b7f96;
   margin-bottom:1.8rem;font-size:.98rem;
 }
 
-/* Thèmes de catégories */
-.menu-board .cat-pink{--cat:#ff5fa2;--cat-2:#ffc1da;--cat-grad:linear-gradient(180deg,#ff9ec5,#ff5fa2);--cat-ink:#2b0716}
-.menu-board .cat-purple{--cat:#a855f7;--cat-2:#f3c4fd;--cat-grad:linear-gradient(180deg,#e11d48,#a855f7);--cat-ink:#f8f4ff}
-.menu-board .cat-cyan{--cat:#0ea5e9;--cat-2:#bde9ff;--cat-grad:linear-gradient(180deg,#7dd3fc,#0ea5e9);--cat-ink:#04212f}
-.menu-board .cat-amber{--cat:#f59e0b;--cat-2:#fde3b3;--cat-grad:linear-gradient(180deg,#f8c471,#f59e0b);--cat-ink:#2a1a00}
-.menu-board .cat-blue{--cat:#3b6cf6;--cat-2:#c3d3ff;--cat-grad:linear-gradient(180deg,#93b4ff,#3b6cf6);--cat-ink:#f4f7ff}
+/* Thèmes de catégories — accents harmonisés au thème clair */
+.menu-board .cat-pink{--cat:#ec4899;--cat-soft:#fde7f1;--cat-grad:linear-gradient(180deg,#f472b6,#ec4899);--cat-ink:#fff}
+.menu-board .cat-purple{--cat:#9333ea;--cat-soft:#f3e8fd;--cat-grad:linear-gradient(180deg,#c084fc,#9333ea);--cat-ink:#fff}
+.menu-board .cat-cyan{--cat:#14b0c0;--cat-soft:#dcf7fa;--cat-grad:linear-gradient(180deg,#4fd0db,#14b0c0);--cat-ink:#fff}
+.menu-board .cat-amber{--cat:#f59e0b;--cat-soft:#fdeed3;--cat-grad:linear-gradient(180deg,#fbbf24,#f59e0b);--cat-ink:#fff}
+.menu-board .cat-blue{--cat:#3b6cf6;--cat-soft:#e5ebfd;--cat-grad:linear-gradient(180deg,#7c97f9,#3b6cf6);--cat-ink:#fff}
 
-/* Filtre sticky style craie */
+/* Filtre sticky — carte blanche comme le reste du site */
 .chalk-filter{
   position:sticky;top:66px;z-index:40;
-  background:rgba(27,27,32,.92);backdrop-filter:blur(8px);
+  background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
   margin:0 -.4rem;padding:.8rem 1rem;border-radius:16px;
-  border:1px solid rgba(255,255,255,.08);
-  box-shadow:0 10px 24px rgba(0,0,0,.35);
+  border:1px solid #def1f4;
+  box-shadow:0 8px 20px rgba(26,58,92,.08);
 }
 .chalk-filter .filter-btn{
   flex:1 1 0;
   min-width:0;
   display:inline-flex;align-items:center;justify-content:center;
   text-align:center;
-  background:transparent;color:rgba(255,255,255,.78);
-  border:1.5px solid rgba(255,255,255,.18);
+  background:#f2fbfd;color:var(--navy);
+  border:1.5px solid #cdeef3;
   font-family:'Caveat',cursive;font-size:1.25rem;font-weight:600;
   padding:.28rem .95rem;
 }
 .chalk-filter .filter-btn:hover{
-  background:transparent;border-color:var(--cat);color:var(--cat-2);
+  background:var(--cat-soft);border-color:var(--cat);color:var(--cat);
 }
 .chalk-filter .filter-btn.active{
   background:var(--cat-grad);border-color:transparent;color:var(--cat-ink);
 }
 .filter-emoji{margin-right:.15rem}
 
-/* Panneau affiche */
+/* Panneau affiche — carte blanche */
 .menu-panel{
   margin-top:2rem;border-radius:20px;overflow:hidden;
-  background:#232329;
-  border:1px solid rgba(255,255,255,.09);
-  box-shadow:0 24px 50px rgba(0,0,0,.45);
+  background:#fff;
+  border:1px solid #def1f4;
+  box-shadow:0 14px 30px rgba(26,58,92,.08);
 }
 .panel-head{
   background:var(--cat-grad);
@@ -272,7 +277,7 @@ h3{font-size:1.25rem}
   display:flex;align-items:center;gap:.55rem;
   margin:0;
 }
-.panel-emoji{filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}
+.panel-emoji{filter:drop-shadow(0 2px 3px rgba(0,0,0,.18))}
 .menu-panel > .drip{
   display:block;width:100%;height:34px;margin-top:-1px;color:var(--cat);
 }
@@ -282,54 +287,55 @@ h3{font-size:1.25rem}
 /* Sous-sections */
 .subsection-title{
   font-family:'Caveat',cursive;font-weight:700;
-  color:var(--cat-2);font-size:1.7rem;line-height:1.15;
+  color:var(--cat);font-size:1.7rem;line-height:1.15;
   display:inline-block;margin-bottom:.15rem;
 }
 .subsection-title::after{
   content:"";display:block;height:3px;border-radius:2px;
-  background:var(--cat);opacity:.55;margin-top:.05rem;
+  background:var(--cat);opacity:.45;margin-top:.05rem;
   transform:rotate(-.6deg);
 }
-.subsection-note{color:rgba(255,255,255,.45);font-size:.85rem;margin:-.15rem 0 .7rem}
+.subsection-note{color:#7a95a8;font-size:.85rem;margin:-.15rem 0 .7rem}
 
-/* Lignes produits style menu ardoise */
+/* Lignes produits */
 .chalk-lines{display:grid;gap:.55rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .chalk-line{display:flex;align-items:baseline;gap:.6rem;min-width:0}
 .chalk-name{
   font-family:'Caveat',cursive;font-size:1.45rem;font-weight:600;
-  color:#f6f4ec;line-height:1.15;
+  color:var(--navy);line-height:1.15;
 }
 .chalk-leader{
   flex:1;min-width:1.2rem;
-  border-bottom:2px dotted rgba(255,255,255,.28);
+  border-bottom:2px dotted #bfe4ea;
   transform:translateY(-4px);
 }
 .price-chip{
-  background:#fdfcf7;color:#1c1c22;font-weight:700;font-size:.92rem;
+  background:var(--cat);color:#fff;font-weight:700;font-size:.92rem;
   font-family:'Poppins',sans-serif;
   padding:.18rem .6rem;border-radius:999px;white-space:nowrap;
-  box-shadow:0 2px 5px rgba(0,0,0,.35);
+  box-shadow:0 2px 6px rgba(26,58,92,.14);
 }
 
-/* Encadrés "inclus" style craie */
+/* Encadrés "inclus" */
 .chalk-box{
   position:relative;margin-top:.5rem;
-  border:2px dashed rgba(255,255,255,.3);border-radius:14px;
+  border:2px dashed var(--cat);border-radius:14px;
   padding:1rem 1.1rem .9rem;
+  background:var(--cat-soft);
 }
 .chalk-box-badge{
   position:absolute;top:-.75rem;left:1rem;
-  background:#2fd07a;color:#06210f;font-size:.74rem;font-weight:700;
+  background:var(--cat);color:#fff;font-size:.74rem;font-weight:700;
   text-transform:uppercase;letter-spacing:.4px;
   padding:.15rem .6rem;border-radius:999px;
-  box-shadow:0 2px 5px rgba(0,0,0,.35);
+  box-shadow:0 2px 5px rgba(26,58,92,.18);
 }
 .chalk-chips{display:flex;flex-wrap:wrap;gap:.45rem}
 .chalk-chip{
   font-family:'Caveat',cursive;font-size:1.15rem;font-weight:600;
-  color:rgba(255,255,255,.85);
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.12);
+  color:var(--navy);
+  background:#fff;
+  border:1px solid #cdeef3;
   border-radius:999px;padding:.02rem .7rem;
 }
 

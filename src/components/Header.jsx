@@ -25,7 +25,6 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container nav-wrap">
-        <NavLink className="logo" to="/">ASHROLLS</NavLink>
         <nav className="nav" id="nav">
           <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
             Accueil
@@ -37,8 +36,12 @@ export default function Header() {
             Contact
           </NavLink>
         </nav>
-        <span className={`status-badge ${status.open ? 'open' : 'closed'}`}>
-          {status.text}
+        <span
+          className={`status-badge ${status.open ? 'open' : 'closed'}`}
+          title={status.text}
+        >
+          <span className="status-text">{status.text}</span>
+          <span className="status-icon" aria-hidden="true">📞</span>
         </span>
       </div>
     </header>

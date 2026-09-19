@@ -27,7 +27,7 @@ const menuData = [
       {
         title: "Boule Bastique",
         items: [
-          { name: "Mini (7 boules)", price: "7" },
+          { name: "Mini (7 boules)", price: "8" },
           { name: "Medium (14 boules)", price: "13" },
           { name: "Large (21 boules)", price: "17,5" },
         ],
