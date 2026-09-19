@@ -13,9 +13,10 @@ export default function MenuPage() {
   return (
     <>
       <Header />
-      <main className="section-light decorative-bg">
+      <main className="menu-board">
         <div className="container">
-          <h1 className="page-title">Notre Menu</h1>
+          <h1 className="board-title">Notre Menu</h1>
+          <p className="board-subtitle">Roll It Your Way! — Gelaterie artisanale à Djerba</p>
           <MenuFilter
             categories={menuData}
             activeFilter={activeFilter}

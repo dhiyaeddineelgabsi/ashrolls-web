@@ -1,89 +1,162 @@
+// Source de vérité : F:\work\projet ilyes\menu_ash_v4.csv
+// Prix en DT (format français, virgule décimale)
 const menuData = [
+  {
+    category: "pates",
+    label: "Pâtes",
+    emoji: "🥞",
+    theme: "pink",
+    subSections: [
+      {
+        title: "Mini Pancakes",
+        items: [
+          { name: "Saghroun box", price: "5" },
+          { name: "Médium box", price: "8" },
+          { name: "Large box", price: "10" },
+          { name: "Spécial (20 pièces)", price: "19" },
+        ],
+      },
+      {
+        title: "ASH Cup",
+        items: [
+          { name: "Classique", price: "9" },
+          { name: "Fruits ASH cup", price: "11" },
+          { name: "Chocolat ASH cup", price: "12" },
+        ],
+      },
+      {
+        title: "Boule Bastique",
+        items: [
+          { name: "Mini (7 boules)", price: "7" },
+          { name: "Medium (14 boules)", price: "13" },
+          { name: "Large (21 boules)", price: "17,5" },
+        ],
+      },
+      {
+        title: "Toppings",
+        note: "inclus avec la commande",
+        options: [
+          "Nutella", "Lotus", "Morjen", "Choco.blanc", "Choco.noir",
+          "Pistache", "Oreo", "Café", "Caramel", "Fruits secs",
+        ],
+      },
+    ],
+  },
   {
     category: "glace",
     label: "Glace",
-    items: [
-      { name: "Mini", description: "", price: "5DT", badge: null, type: "product" },
-      { name: "Medium", description: "", price: "6DT", badge: null, type: "product" },
-      { name: "Large", description: "", price: "8DT", badge: null, type: "product" },
-      { name: "Supplément", description: "", price: "3DT", badge: null, type: "product" },
-      { name: "Barre de chocolat", description: "Kitkat, Nutella, Snickers, Morjen, Raffaello, Lotus, Twix, Ferrero, M&M's, Mars", price: "Inclus", badge: null, type: "option" },
-      { name: "Naturel - Fruits de saison", description: "Fraise, Kiwi, Banane, Dattes, Citron menthe", price: "Inclus", badge: null, type: "option" },
-      { name: "Naturel - Fruits secs", description: "Amande, Noisette, Noix de cajou, Pistache, Mixte", price: "Inclus", badge: null, type: "option" },
-    ]
+    emoji: "🍦",
+    theme: "purple",
+    subSections: [
+      {
+        title: "Tailles",
+        items: [
+          { name: "Mini", price: "5" },
+          { name: "Medium", price: "6" },
+          { name: "Large", price: "8" },
+        ],
+      },
+      {
+        title: "Supplément",
+        items: [
+          { name: "Supplément", price: "3" },
+        ],
+      },
+      {
+        title: "Barre de chocolat",
+        note: "inclus avec la glace",
+        options: [
+          "KitKat", "Nutella", "Snickers", "Morjen", "Raffaello",
+          "Lotus", "Twix", "Ferrero", "M&M's", "Mars",
+        ],
+      },
+      {
+        title: "Naturel — Fruits de saison",
+        note: "inclus avec la glace",
+        options: ["Fraise", "Kiwi", "Banane", "Dattes", "Citron menthe"],
+      },
+      {
+        title: "Naturel — Fruits secs",
+        note: "inclus avec la glace",
+        options: ["Amande", "Noisette", "Noix de cajou", "Pistache", "Mixte"],
+      },
+    ],
   },
   {
     category: "jwajem",
     label: "Jwajem",
-    items: [
-      { name: "Classic", description: "", price: "8DT", badge: null, type: "product" },
-      { name: "Nutella", description: "", price: "8DT", badge: null, type: "product" },
-      { name: "Lotus", description: "", price: "11DT", badge: null, type: "product" },
-      { name: "Morjen", description: "", price: "11DT", badge: null, type: "product" },
-      { name: "Overdose", description: "", price: "12,5DT", badge: null, type: "product" },
-      { name: "Danette", description: "", price: "10DT", badge: null, type: "product" },
-      { name: "Ferrero", description: "", price: "12DT", badge: null, type: "product" },
-      { name: "Kinder", description: "", price: "12DT", badge: null, type: "product" },
-      { name: "Chocolat blanc caramel", description: "", price: "12DT", badge: null, type: "product" },
-      { name: "Pistache", description: "", price: "14DT", badge: null, type: "product" },
-      { name: "Spécial ASH", description: "", price: "19DT", badge: null, type: "product" },
-    ]
-  },
-  {
-    category: "pates",
-    label: "Pâtes",
-    items: [
-      { name: "Saghroun box", description: "Mini Pancakes", price: "5DT", badge: null, type: "product" },
-      { name: "Médium box", description: "Mini Pancakes", price: "8DT", badge: null, type: "product" },
-      { name: "Large box", description: "Mini Pancakes", price: "10DT", badge: null, type: "product" },
-      { name: "Spécial (20 pièces)", description: "Mini Pancakes", price: "19DT", badge: null, type: "product" },
-      { name: "Classique", description: "ASH Cup", price: "9DT", badge: null, type: "product" },
-      { name: "Fruits ASH cup", description: "ASH Cup", price: "11DT", badge: null, type: "product" },
-      { name: "Chocolat ASH cup", description: "ASH Cup", price: "12DT", badge: null, type: "product" },
-      { name: "Mini", description: "Boule Bastique — 7 boules", price: "7DT", badge: null, type: "product" },
-      { name: "Medium", description: "Boule Bastique — 14 boules", price: "13DT", badge: null, type: "product" },
-      { name: "Large", description: "Boule Bastique — 21 boules", price: "17,5DT", badge: null, type: "product" },
-      { name: "Toppings", description: "Nutella, Lotus, Morjen, Choco.blanc, Choco.noir, Pistache, Oreo, Café, Caramel, Fruits secs", price: "Inclus", badge: null, type: "option" },
-    ]
+    emoji: "🍯",
+    theme: "cyan",
+    subSections: [
+      {
+        title: "Jwajem",
+        items: [
+          { name: "Classic", price: "8" },
+          { name: "Nutella", price: "8" },
+          { name: "Lotus", price: "11" },
+          { name: "Morjen", price: "11" },
+          { name: "Overdose", price: "12,5" },
+          { name: "Danette", price: "10" },
+          { name: "Ferrero", price: "12" },
+          { name: "Kinder", price: "12" },
+          { name: "Chocolat blanc caramel", price: "12" },
+          { name: "Pistache", price: "14" },
+          { name: "Spécial ASH", price: "19" },
+        ],
+      },
+    ],
   },
   {
     category: "gourmand",
     label: "Gourmand",
-    items: [
-      { name: "Saint-Sébastien", description: "", price: "11DT", badge: null, type: "product" },
-      { name: "Supplément pistache", description: "", price: "3DT", badge: null, type: "product" },
-      { name: "Cheese Doubai", description: "", price: "10DT", badge: null, type: "product" },
-      { name: "Tiramisu", description: "Pistache, Nutella, fraise, spéculoos", price: "10DT", badge: null, type: "product" },
-      { name: "Classique ASH Dubai", description: "", price: "10DT", badge: null, type: "product" },
-      { name: "Spécial ASH Dubai", description: "", price: "13DT", badge: null, type: "product" },
-    ]
-  },
-  {
-    category: "smoothies",
-    label: "Smoothies",
-    items: [
-      { name: "Smoothie fruits", description: "", price: "7DT", badge: null, type: "product" },
-      { name: "Smoothie fruits secs", description: "", price: "8,5DT", badge: null, type: "product" },
-    ]
+    emoji: "🍰",
+    theme: "amber",
+    subSections: [
+      {
+        title: "Gourmand",
+        items: [
+          { name: "Saint-Sébastien", price: "11" },
+          { name: "Supplément pistache", price: "3" },
+          { name: "Cheese Doubai", price: "10" },
+          { name: "Tiramisu (pistache / Nutella / fraise / spéculoos)", price: "10" },
+          { name: "Classique ASH Dubai", price: "10" },
+          { name: "Spécial ASH Dubai", price: "13" },
+        ],
+      },
+    ],
   },
   {
     category: "boissons",
     label: "Boissons",
-    items: [
-      { name: "Nespresso", description: "Café", price: "3,5DT", badge: null, type: "product" },
-      { name: "Café crème", description: "Café", price: "4DT", badge: null, type: "product" },
-      { name: "Eau (0.5 L)", description: "", price: "1DT", badge: null, type: "product" },
-      { name: "Jus de fraise", description: "", price: "6DT", badge: null, type: "product" },
-      { name: "Citronnade", description: "", price: "3DT", badge: null, type: "product" },
-      { name: "Virgin mojito", description: "", price: "5DT", badge: null, type: "product" },
-      { name: "Blu mojito", description: "", price: "6DT", badge: null, type: "product" },
-      { name: "Red mojito", description: "", price: "7DT", badge: null, type: "product" },
-      { name: "Frappuccino classique", description: "", price: "5DT", badge: null, type: "product" },
-      { name: "Supplément frappuccino", description: "", price: "7,5DT", badge: null, type: "product" },
-      { name: "Lait de poule", description: "", price: "6DT", badge: null, type: "product" },
-      { name: "Milk-shake", description: "", price: "8,5DT", badge: null, type: "product" },
-      { name: "Milk-shake (Nutella, pistache, lotus)", description: "", price: "10DT", badge: null, type: "product" },
-    ]
+    emoji: "🥤",
+    theme: "blue",
+    subSections: [
+      {
+        title: "Smoothies",
+        items: [
+          { name: "Smoothie fruits", price: "7" },
+          { name: "Smoothie fruits secs", price: "8,5" },
+        ],
+      },
+      {
+        title: "Boissons",
+        items: [
+          { name: "Nespresso", price: "3,5" },
+          { name: "Café crème", price: "4" },
+          { name: "Eau (0,5 L)", price: "1" },
+          { name: "Jus de fraise", price: "6" },
+          { name: "Citronnade", price: "3" },
+          { name: "Virgin mojito", price: "5" },
+          { name: "Blu mojito", price: "6" },
+          { name: "Red mojito", price: "7" },
+          { name: "Frappuccino classique", price: "5" },
+          { name: "Supplément Frappuccino", price: "7,5" },
+          { name: "Lait de poule", price: "6" },
+          { name: "Milk-shake", price: "8,5" },
+          { name: "Milk-shake (Nutella / pistache / lotus)", price: "10" },
+        ],
+      },
+    ],
   },
 ];
 

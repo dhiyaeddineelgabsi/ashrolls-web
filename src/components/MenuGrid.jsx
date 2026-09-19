@@ -1,28 +1,55 @@
-import ProductCard from './ProductCard';
+import Drip from './Drip';
 
-export default function MenuGrid({ categories, activeFilter }) {
-  const activeCategory = categories.find((c) => c.category === activeFilter);
-  const items = activeCategory ? activeCategory.items : [];
-  const products = items.filter((i) => i.type !== "option");
-  const options = items.filter((i) => i.type === "option");
-
+function SubSection({ sub }) {
   return (
-    <>
-      <div className="products-grid">
-        {products.map((item, idx) => (
-          <ProductCard key={idx} item={item} />
-        ))}
-      </div>
-      {options.length > 0 && (
-        <div className="options-section">
-          <h3 className="options-title">✓ Inclus avec votre commande</h3>
-          <div className="options-grid">
-            {options.map((item, idx) => (
-              <ProductCard key={idx} item={item} />
+    <section className="menu-subsection">
+      <h3 className="subsection-title">{sub.title}</h3>
+      {sub.note && <p className="subsection-note">{sub.note}</p>}
+
+      {sub.items && (
+        <div className="chalk-lines">
+          {sub.items.map((item, i) => (
+            <div className="chalk-line" key={i}>
+              <span className="chalk-name">{item.name}</span>
+              <span className="chalk-leader" aria-hidden="true" />
+              <span className="price-chip">{item.price} DT</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {sub.options && (
+        <div className="chalk-box">
+          <span className="chalk-box-badge">inclus</span>
+          <div className="chalk-chips">
+            {sub.options.map((opt, i) => (
+              <span className="chalk-chip" key={i}>{opt}</span>
             ))}
           </div>
         </div>
       )}
-    </>
+    </section>
+  );
+}
+
+export default function MenuGrid({ categories, activeFilter }) {
+  const activeCategory = categories.find((c) => c.category === activeFilter);
+  if (!activeCategory) return null;
+
+  return (
+    <article className={`menu-panel reveal cat-${activeCategory.theme}`}>
+      <header className="panel-head">
+        <h2 className="panel-title">
+          <span className="panel-emoji">{activeCategory.emoji}</span>
+          {activeCategory.label}
+        </h2>
+      </header>
+      <Drip />
+      <div className="panel-body">
+        {activeCategory.subSections.map((sub, i) => (
+          <SubSection sub={sub} key={i} />
+        ))}
+      </div>
+    </article>
   );
 }

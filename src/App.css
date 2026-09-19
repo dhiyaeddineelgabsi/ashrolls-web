@@ -76,36 +76,23 @@ h3{font-size:1.25rem}
     linear-gradient(120deg,transparent 0%,transparent 60%,rgba(62,200,212,.06) 100%);
 }
 
-.card-grid,.special-grid,.products-grid,.contact-grid{
+.card-grid,.special-grid,.contact-grid{
   display:grid;gap:1rem;
 }
 .card-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .special-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.products-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin-top:1.6rem}
 .contact-grid{grid-template-columns:1fr;align-items:start;max-width:760px}
 
-.card,.special-card,.product-card,.contact-card{
+.card,.special-card,.contact-card{
   background:#fff;border:1px solid #def1f4;border-radius:16px;
   padding:1rem;box-shadow:0 8px 20px rgba(0,0,0,.04);
   transition:transform .28s ease, box-shadow .28s ease;
 }
-.card:hover,.special-card:hover,.product-card:hover,.contact-card:hover{
+.card:hover,.special-card:hover,.contact-card:hover{
   transform:translateY(-4px);
   box-shadow:0 14px 24px rgba(0,0,0,.08);
 }
-.special-card strong,.product-card strong{color:var(--accent);font-size:1.2rem}
-
-.img-placeholder{
-  height:140px;border-radius:12px;background:var(--turquoise);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  color:#fff;font-size:2rem;margin-bottom:.8rem
-}
-.img-placeholder span{font-size:.95rem;font-weight:600}
-
-.sup-badge{
-  display:inline-block;margin-top:.6rem;padding:.25rem .55rem;border-radius:999px;
-  background:#fff5df;color:#b57200;font-size:.78rem;font-weight:700
-}
+.special-card strong{color:var(--accent);font-size:1.2rem}
 
 .filter-bar{
   display:flex;gap:.6rem;overflow:auto;padding-bottom:.4rem;
@@ -196,48 +183,6 @@ h3{font-size:1.25rem}
 .reveal{opacity:0;transform:translateY(18px);transition:all .7s ease}
 .reveal.visible{opacity:1;transform:none}
 
-.options-section{
-  margin-top:2.2rem;
-  padding-top:1.6rem;
-  border-top:2px dashed #d0f0f4;
-}
-.options-title{
-  font-family:'Baloo 2',cursive;
-  color:var(--navy);
-  font-size:1.15rem;
-  margin-bottom:.9rem;
-  display:flex;
-  align-items:center;
-  gap:.4rem;
-}
-.options-grid{
-  display:grid;
-  gap:.8rem;
-  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-}
-.option-card{
-  background:#f0fbfc;
-  border:1px solid #d0f0f4;
-  border-radius:14px;
-  padding:.9rem 1rem;
-  transition:transform .28s ease, box-shadow .28s ease;
-}
-.option-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 20px rgba(0,0,0,.05);
-}
-.option-card h3{font-size:1.05rem;margin-bottom:.25rem}
-.option-card p{font-size:.9rem;color:#4a6572;margin-bottom:.45rem}
-.option-badge{
-  display:inline-block;
-  padding:.22rem .65rem;
-  border-radius:999px;
-  background:#dbf6e2;
-  color:#16773a;
-  font-size:.76rem;
-  font-weight:700;
-}
-
 @media (max-width:860px){
   .hamburger{display:block}
   .nav{
@@ -246,4 +191,153 @@ h3{font-size:1.25rem}
   }
   .nav.show{display:flex}
   .status-badge{font-size:.76rem}
+}
+
+/* ============ Page Menu — thème ardoise (chalkboard) ============ */
+.menu-board{
+  padding:3rem 0 4.5rem;
+  color:#f3f1ea;
+  background-color:#1b1b20;
+  background-image:
+    radial-gradient(ellipse at 15% 8%,rgba(255,255,255,.05),transparent 42%),
+    radial-gradient(ellipse at 85% 30%,rgba(255,255,255,.035),transparent 40%),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.014) 0 2px,transparent 2px 9px),
+    repeating-linear-gradient(0deg,rgba(0,0,0,.14) 0 3px,transparent 3px 26px);
+  box-shadow:inset 0 0 120px rgba(0,0,0,.55);
+}
+.board-title{
+  color:#fff;text-align:center;margin:0 0 .3rem;
+  text-shadow:0 2px 0 rgba(0,0,0,.4);
+}
+.board-subtitle{
+  text-align:center;color:rgba(255,255,255,.55);
+  margin-bottom:1.8rem;font-size:.98rem;
+}
+
+/* Thèmes de catégories */
+.menu-board .cat-pink{--cat:#ff5fa2;--cat-2:#ffc1da;--cat-grad:linear-gradient(180deg,#ff9ec5,#ff5fa2);--cat-ink:#2b0716}
+.menu-board .cat-purple{--cat:#a855f7;--cat-2:#f3c4fd;--cat-grad:linear-gradient(180deg,#e11d48,#a855f7);--cat-ink:#f8f4ff}
+.menu-board .cat-cyan{--cat:#0ea5e9;--cat-2:#bde9ff;--cat-grad:linear-gradient(180deg,#7dd3fc,#0ea5e9);--cat-ink:#04212f}
+.menu-board .cat-amber{--cat:#f59e0b;--cat-2:#fde3b3;--cat-grad:linear-gradient(180deg,#f8c471,#f59e0b);--cat-ink:#2a1a00}
+.menu-board .cat-blue{--cat:#3b6cf6;--cat-2:#c3d3ff;--cat-grad:linear-gradient(180deg,#93b4ff,#3b6cf6);--cat-ink:#f4f7ff}
+
+/* Filtre sticky style craie */
+.chalk-filter{
+  position:sticky;top:66px;z-index:40;
+  background:rgba(27,27,32,.92);backdrop-filter:blur(8px);
+  margin:0 -.4rem;padding:.8rem 1rem;border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 10px 24px rgba(0,0,0,.35);
+}
+.chalk-filter .filter-btn{
+  flex:1 1 0;
+  min-width:0;
+  display:inline-flex;align-items:center;justify-content:center;
+  text-align:center;
+  background:transparent;color:rgba(255,255,255,.78);
+  border:1.5px solid rgba(255,255,255,.18);
+  font-family:'Caveat',cursive;font-size:1.25rem;font-weight:600;
+  padding:.28rem .95rem;
+}
+.chalk-filter .filter-btn:hover{
+  background:transparent;border-color:var(--cat);color:var(--cat-2);
+}
+.chalk-filter .filter-btn.active{
+  background:var(--cat-grad);border-color:transparent;color:var(--cat-ink);
+}
+.filter-emoji{margin-right:.15rem}
+
+/* Panneau affiche */
+.menu-panel{
+  margin-top:2rem;border-radius:20px;overflow:hidden;
+  background:#232329;
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:0 24px 50px rgba(0,0,0,.45);
+}
+.panel-head{
+  background:var(--cat-grad);
+  padding:1.1rem 1.6rem .9rem;
+}
+.panel-title{
+  color:var(--cat-ink);
+  font-size:clamp(1.6rem,4vw,2.2rem);
+  display:flex;align-items:center;gap:.55rem;
+  margin:0;
+}
+.panel-emoji{filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}
+.menu-panel > .drip{
+  display:block;width:100%;height:34px;margin-top:-1px;color:var(--cat);
+}
+
+.panel-body{padding:1.6rem 1.6rem 2.2rem;display:grid;gap:2rem}
+
+/* Sous-sections */
+.subsection-title{
+  font-family:'Caveat',cursive;font-weight:700;
+  color:var(--cat-2);font-size:1.7rem;line-height:1.15;
+  display:inline-block;margin-bottom:.15rem;
+}
+.subsection-title::after{
+  content:"";display:block;height:3px;border-radius:2px;
+  background:var(--cat);opacity:.55;margin-top:.05rem;
+  transform:rotate(-.6deg);
+}
+.subsection-note{color:rgba(255,255,255,.45);font-size:.85rem;margin:-.15rem 0 .7rem}
+
+/* Lignes produits style menu ardoise */
+.chalk-lines{display:grid;gap:.55rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.chalk-line{display:flex;align-items:baseline;gap:.6rem;min-width:0}
+.chalk-name{
+  font-family:'Caveat',cursive;font-size:1.45rem;font-weight:600;
+  color:#f6f4ec;line-height:1.15;
+}
+.chalk-leader{
+  flex:1;min-width:1.2rem;
+  border-bottom:2px dotted rgba(255,255,255,.28);
+  transform:translateY(-4px);
+}
+.price-chip{
+  background:#fdfcf7;color:#1c1c22;font-weight:700;font-size:.92rem;
+  font-family:'Poppins',sans-serif;
+  padding:.18rem .6rem;border-radius:999px;white-space:nowrap;
+  box-shadow:0 2px 5px rgba(0,0,0,.35);
+}
+
+/* Encadrés "inclus" style craie */
+.chalk-box{
+  position:relative;margin-top:.5rem;
+  border:2px dashed rgba(255,255,255,.3);border-radius:14px;
+  padding:1rem 1.1rem .9rem;
+}
+.chalk-box-badge{
+  position:absolute;top:-.75rem;left:1rem;
+  background:#2fd07a;color:#06210f;font-size:.74rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.4px;
+  padding:.15rem .6rem;border-radius:999px;
+  box-shadow:0 2px 5px rgba(0,0,0,.35);
+}
+.chalk-chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chalk-chip{
+  font-family:'Caveat',cursive;font-size:1.15rem;font-weight:600;
+  color:rgba(255,255,255,.85);
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;padding:.02rem .7rem;
+}
+
+@media (max-width:860px){
+  .panel-head{padding:.95rem 1.1rem .8rem}
+  .panel-body{padding:1.3rem 1.05rem 1.8rem}
+  .chalk-lines{grid-template-columns:1fr}
+  .chalk-name{font-size:1.3rem}
+  .price-chip{font-size:.85rem}
+  .chalk-chip{font-size:1.05rem}
+}
+
+@media (max-width:700px){
+  .chalk-filter .filter-btn{
+    flex:0 0 auto;
+    font-size:1.1rem;
+    padding:.25rem .8rem;
+  }
 }

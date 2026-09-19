@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const PHONES = [
   { value: '21620229964', label: '+216 20 229 964' },
-  { value: '21692950656', label: '+216 92 950 656' },
+  { value: '21626244024', label: '+216 26 244 024' },
 ];
 
 export default function CallModal({ isOpen, onClose }) {

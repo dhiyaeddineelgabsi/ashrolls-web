@@ -65,10 +65,10 @@ Aucun dossier `assets/`, `js/` ou `images/` n'existe pour le moment : les script
 
 ### 3.3 `contact.html` — Contact
 
-- **Infos pratiques** : adresse (Houmet Souk, Djerba), horaires (13h00 – 00h00, tous les jours).
+- **Infos pratiques** : adresse (Houmet Souk, Djerba), horaires (12h00 – 00h00, tous les jours).
 - Bouton **« Nous appeler »** ouvrant un **modal** permettant de choisir entre deux numéros :
   - +216 20 229 964
-  - +216 92 950 656
+  - +216 26 244 024
 - Boutons **Appeler** (`tel:`) et **WhatsApp** (`wa.me`) dynamiques selon le numéro sélectionné.
 - Lien **Google Maps** (`maps.app.goo.gl/...`) + **iframe** de localisation (33.875436, 10.8674224).
 - Liens réseaux sociaux (Instagram officiel, Facebook, TikTok).
@@ -116,7 +116,7 @@ Aucun dossier `assets/`, `js/` ou `images/` n'existe pour le moment : les script
 
 Les scripts communs à toutes les pages sont centralisés dans **`main.js`** (inclus via `<script src="main.js"></script>`) :
 
-1. **`updateStatusBadge()`** : calcule l'heure en Tunisie (`Africa/Tunis`) et affiche 🟢 Ouvert (13h00 – 00h00) / 🔴 Fermé. Rafraîchi toutes les 60 s.
+1. **`updateStatusBadge()`** : calcule l'heure en Tunisie (`Africa/Tunis`) et affiche 🟢 Ouvert (12h00 – 00h00) / 🔴 Fermé. Rafraîchi toutes les 60 s.
 2. **Menu hamburger** : toggle de la classe `.show` sur la nav.
 3. **IntersectionObserver** : révèle les éléments `.reveal` au scroll.
 
@@ -131,10 +131,10 @@ Scripts spécifiques conservés inline dans leur page :
 
 - **Adresse** : Ashrolls, Houmet Souk, Djerba, Tunisie
 - **GPS** : 33.875436, 10.8674224
-- **Téléphones** : +216 20 229 964 / +216 92 950 656
+- **Téléphones** : +216 20 229 964 / +216 26 244 024
 - **WhatsApp** : https://wa.me/21620229964
 - **Instagram** : https://www.instagram.com/_ashrolls_/?hl=fr
-- **Horaires** : tous les jours, 13h00 – 00h00
+- **Horaires** : tous les jours, 12h00 – 00h00
 
 ---
 

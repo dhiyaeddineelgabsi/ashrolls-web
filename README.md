@@ -20,7 +20,7 @@ Site vitrine statique (HTML / CSS / JS natif) présentant la gelaterie, son menu
 
 ## ✨ Fonctionnalités
 
-- 🟢 Badge **Ouvert / Fermé** calculé en temps réel (heure de Tunisie, 13h00 – 00h00)
+- 🟢 Badge **Ouvert / Fermé** calculé en temps réel (heure de Tunisie, 12h00 – 00h00)
 - 📱 **Responsive** mobile-first avec menu hamburger
 - 🍦 **Menu filtrable** par catégorie (Ice Roll, Jwajem, Cheesecakes, Pastries, Smoothies, Refreshing Drinks)
 - 💬 **Bouton flottant WhatsApp** + modal de choix entre deux numéros
@@ -76,9 +76,9 @@ ashrolls web/
 ## 📞 Contact
 
 - **Adresse** : Ashrolls, Houmet Souk, Djerba, Tunisie
-- **Téléphones** : +216 20 229 964 / +216 92 950 656
+- **Téléphones** : +216 20 229 964 / +216 26 244 024
 - **Instagram** : [@_ashrolls_](https://www.instagram.com/_ashrolls_/?hl=fr)
-- **Horaires** : tous les jours, 13h00 – 00h00
+- **Horaires** : tous les jours, 12h00 – 00h00
 
 ---
 

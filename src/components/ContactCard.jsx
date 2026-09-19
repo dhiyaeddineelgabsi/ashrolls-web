@@ -6,7 +6,7 @@ export default function ContactCard({ onCallClick }) {
 
       <div className="opening-box">
         <h3>Horaires d'ouverture</h3>
-        <p>Tous les jours (Dimanche au Samedi) : 13h00 – 00h00</p>
+        <p>Tous les jours (Dimanche au Samedi) : 12h00 – 00h00</p>
         <small>Les horaires peuvent varier les jours fériés</small>
       </div>
 
@@ -17,8 +17,8 @@ export default function ContactCard({ onCallClick }) {
 
       <div className="socials contact-socials mt-md">
         <a href="https://www.instagram.com/_ashrolls_/?hl=fr">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">TikTok</a>
+        <a href="https://www.facebook.com/profile.php?id=61591645100741" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.tiktok.com/@ash.rolls" target="_blank" rel="noopener">TikTok</a>
       </div>
     </section>
   );

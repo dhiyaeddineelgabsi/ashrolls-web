@@ -12,7 +12,7 @@ export default function Header() {
       const hour = tunisiaTime.getHours();
       const minute = tunisiaTime.getMinutes();
       const totalMinutes = hour * 60 + minute;
-      const isOpen = totalMinutes >= 780 && totalMinutes < 1440;
+      const isOpen = totalMinutes >= 720 && totalMinutes < 1440;
       setStatus({
         open: isOpen,
         text: isOpen ? '🟢 Ouvert maintenant' : '🔴 Fermé',
