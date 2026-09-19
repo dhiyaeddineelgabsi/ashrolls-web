@@ -13,6 +13,7 @@ body{
   color:var(--text);
   background:var(--offwhite);
   line-height:1.6;
+  padding-top:66px;
 }
 .container{width:min(1100px,92%);margin:auto}
 
@@ -28,7 +29,7 @@ h3{font-size:1.25rem}
 .page-title{text-align:center;margin:2rem 0 1rem}
 
 .site-header{
-  position:sticky;top:0;z-index:50;
+  position:fixed;top:0;left:0;right:0;z-index:50;
   background:rgba(255,255,255,.95);
   backdrop-filter:blur(8px);
   border-bottom:1px solid #e7f4f7;
@@ -40,7 +41,7 @@ h3{font-size:1.25rem}
 .logo{
   font-family:'Baloo 2',cursive;
   font-size:1.8rem;font-weight:800;
-  color:var(--turquoise);text-decoration:none;
+  color:var(--turquoise);text-decoration:none;line-height:1;
 }
 .nav{display:flex;gap:1rem;align-items:center}
 .nav a{text-decoration:none;color:var(--navy);font-weight:600}
@@ -184,13 +185,20 @@ h3{font-size:1.25rem}
 .reveal.visible{opacity:1;transform:none}
 
 @media (max-width:860px){
-  .hamburger{display:block}
+  .hamburger{display:none}
   .nav{
-    position:absolute;top:66px;right:4%;background:#fff;border:1px solid #d6ecf0;
-    border-radius:12px;flex-direction:column;padding:.8rem;display:none
+    display:flex;flex-direction:row;gap:.9rem;align-items:center;
+    position:static;background:none;border:none;border-radius:0;padding:0;
   }
-  .nav.show{display:flex}
-  .status-badge{font-size:.76rem}
+  .nav a{font-size:.9rem;white-space:nowrap}
+  .status-badge{font-size:.72rem}
+}
+
+@media (max-width:430px){
+  .logo{font-size:1.35rem}
+  .nav{gap:.65rem}
+  .nav a{font-size:.78rem}
+  .status-badge{display:none}
 }
 
 /* ============ Page Menu — thème ardoise (chalkboard) ============ */

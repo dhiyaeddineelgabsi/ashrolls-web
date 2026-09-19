@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [status, setStatus] = useState({ open: false, text: 'Vérification...' });
 
   useEffect(() => {
@@ -27,21 +26,14 @@ export default function Header() {
     <header className="site-header">
       <div className="container nav-wrap">
         <NavLink className="logo" to="/">ASHROLLS</NavLink>
-        <button
-          className="hamburger"
-          aria-label="Ouvrir le menu"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          ☰
-        </button>
-        <nav className={`nav${menuOpen ? ' show' : ''}`} id="nav">
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setMenuOpen(false)}>
+        <nav className="nav" id="nav">
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
             Accueil
           </NavLink>
-          <NavLink to="/menu" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setMenuOpen(false)}>
+          <NavLink to="/menu" className={({ isActive }) => (isActive ? 'active' : '')}>
             Menu
           </NavLink>
-          <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setMenuOpen(false)}>
+          <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
             Contact
           </NavLink>
         </nav>
