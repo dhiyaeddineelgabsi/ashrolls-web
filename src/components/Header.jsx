@@ -25,31 +25,33 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="site-header">
-      <div className="container nav-wrap">
-        <nav className="nav" id="nav">
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Accueil
-          </NavLink>
-          <NavLink to="/menu" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Menu
-          </NavLink>
-          <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Contact
-          </NavLink>
-        </nav>
-        <button
-          type="button"
-          className={`status-badge ${status.open ? 'open' : 'closed'}`}
-          title={status.text}
-          aria-label="Nous appeler"
-          onClick={() => setCallOpen(true)}
-        >
-          <span className="status-text">{status.text}</span>
-          <span className="status-icon" aria-hidden="true">📞</span>
-        </button>
-      </div>
+    <>
+      <header className="site-header">
+        <div className="container nav-wrap">
+          <nav className="nav" id="nav">
+            <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+              Accueil
+            </NavLink>
+            <NavLink to="/menu" className={({ isActive }) => (isActive ? 'active' : '')}>
+              Menu
+            </NavLink>
+            <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
+              Contact
+            </NavLink>
+          </nav>
+          <button
+            type="button"
+            className={`status-badge ${status.open ? 'open' : 'closed'}`}
+            title={status.text}
+            aria-label="Nous appeler"
+            onClick={() => setCallOpen(true)}
+          >
+            <span className="status-text">{status.text}</span>
+            <span className="status-icon" aria-hidden="true">📞</span>
+          </button>
+        </div>
+      </header>
       <CallModal isOpen={callOpen} onClose={() => setCallOpen(false)} />
-    </header>
+    </>
   );
 }

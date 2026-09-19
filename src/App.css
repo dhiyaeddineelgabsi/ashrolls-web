@@ -13,7 +13,7 @@ body{
   color:var(--text);
   background:var(--offwhite);
   line-height:1.6;
-  padding-top:66px;
+  padding-top:74px;
 }
 .container{width:min(1100px,92%);margin:auto}
 
@@ -36,17 +36,17 @@ h3{font-size:1.25rem}
 }
 .nav-wrap{
   display:flex;align-items:center;justify-content:space-between;
-  gap:1rem;padding:.8rem 0;
+  gap:1rem;padding:1.1rem 0;
 }
-.nav{display:flex;gap:1rem;align-items:center;margin:0 auto}
-.nav a{text-decoration:none;color:var(--navy);font-weight:600}
+.nav{display:flex;gap:1.6rem;align-items:center;margin:0 auto}
+.nav a{text-decoration:none;color:var(--navy);font-weight:600;font-size:1.08rem}
 .nav a.active,.nav a:hover{color:var(--turquoise)}
 .hamburger{
   display:none;border:none;background:var(--turquoise);color:#fff;
   width:40px;height:40px;border-radius:10px;font-size:1.2rem;
 }
 .status-badge{
-  padding:.35rem .7rem;border-radius:999px;font-size:.82rem;font-weight:700;
+  padding:.42rem .85rem;border-radius:999px;font-size:.95rem;font-weight:700;
   border:none;cursor:pointer;font-family:inherit;line-height:1.4;
 }
 .status-badge.open{background:#dbf6e2;color:#16773a}
@@ -189,29 +189,30 @@ h3{font-size:1.25rem}
 .reveal.visible{opacity:1;transform:none}
 
 @media (max-width:860px){
+  body{padding-top:76px}
   .hamburger{display:none}
   .nav-wrap{
     position:relative;justify-content:flex-start;
-    padding:.8rem 0;
+    padding:1rem 0;
   }
   .nav{
     position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-    display:flex;flex-direction:row;gap:.9rem;align-items:center;justify-content:center;
+    display:flex;flex-direction:row;gap:1.1rem;align-items:center;justify-content:center;
     background:none;border:none;border-radius:0;padding:0;margin:0;
   }
-  .nav a{font-size:.9rem;white-space:nowrap}
+  .nav a{font-size:1rem;white-space:nowrap}
   .status-badge{
     position:absolute;right:0;top:50%;transform:translateY(-50%);
-    font-size:.72rem;padding:.28rem .55rem;line-height:1.2;
+    padding:.45rem .7rem;line-height:1.2;
   }
   .status-text{display:none}
-  .status-icon{display:inline}
+  .status-icon{display:inline;font-size:1.35rem}
 }
 
 @media (max-width:430px){
-  .nav{gap:.65rem}
-  .nav a{font-size:.78rem}
-  .status-badge{font-size:.85rem;padding:.32rem .5rem}
+  .nav{gap:.75rem}
+  .nav a{font-size:.88rem}
+  .status-badge{padding:.45rem .6rem}
 }
 
 /* ============ Page Menu — thème clair (cohérent avec le site) ============ */
@@ -237,7 +238,7 @@ h3{font-size:1.25rem}
 
 /* Filtre sticky — carte blanche comme le reste du site */
 .chalk-filter{
-  position:sticky;top:66px;z-index:40;
+  position:sticky;top:74px;z-index:40;
   background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
   margin:0 -.4rem;padding:.8rem 1rem;border-radius:16px;
   border:1px solid #def1f4;
