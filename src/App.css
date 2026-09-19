@@ -45,13 +45,6 @@ h3{font-size:1.25rem}
   display:none;border:none;background:var(--turquoise);color:#fff;
   width:40px;height:40px;border-radius:10px;font-size:1.2rem;
 }
-.status-badge{
-  padding:.42rem .85rem;border-radius:999px;font-size:.95rem;font-weight:700;
-  border:none;cursor:pointer;font-family:inherit;line-height:1.4;
-}
-.status-badge.open{background:#dbf6e2;color:#16773a}
-.status-badge.closed{background:#ffe1e1;color:#a52424}
-.status-icon{display:none}
 
 .hero{
   min-height:72vh;display:grid;place-items:center;position:relative;
@@ -201,18 +194,11 @@ h3{font-size:1.25rem}
     background:none;border:none;border-radius:0;padding:0;margin:0;
   }
   .nav a{font-size:1.08rem;white-space:nowrap;padding:.45rem .55rem}
-  .status-badge{
-    position:absolute;right:0;top:50%;transform:translateY(-50%);
-    padding:.45rem .7rem;line-height:1.2;
-  }
-  .status-text{display:none}
-  .status-icon{display:inline;font-size:1.35rem}
 }
 
 @media (max-width:430px){
   .nav{gap:.55rem}
   .nav a{font-size:.98rem;padding:.4rem .45rem}
-  .status-badge{padding:.45rem .6rem}
 }
 
 /* ============ Page Menu — thème clair (cohérent avec le site) ============ */
