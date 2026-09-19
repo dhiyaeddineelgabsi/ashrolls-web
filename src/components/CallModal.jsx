@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 const PHONES = [
-  { value: '21620229964', label: '+216 20 229 964' },
-  { value: '21626244024', label: '+216 26 244 024' },
+  { value: '21620229964', label: 'Ilyes — +216 20 229 964' },
+  { value: '21626244024', label: 'Ashraf — +216 26 244 024' },
 ];
 
 export default function CallModal({ isOpen, onClose }) {

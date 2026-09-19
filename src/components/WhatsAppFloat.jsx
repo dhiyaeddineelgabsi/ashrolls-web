@@ -4,9 +4,9 @@ export default function WhatsAppFloat({ onClick }) {
       type="button"
       onClick={onClick}
       className="whatsapp-float"
-      aria-label="WhatsApp"
+      aria-label="Nous appeler"
     >
-      <span>💬</span>
+      <span>📞</span>
       <em className="tooltip">Contactez-nous</em>
     </button>
   );
