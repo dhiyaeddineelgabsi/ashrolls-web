@@ -47,6 +47,7 @@ h3{font-size:1.25rem}
 }
 .status-badge{
   padding:.35rem .7rem;border-radius:999px;font-size:.82rem;font-weight:700;
+  border:none;cursor:pointer;font-family:inherit;line-height:1.4;
 }
 .status-badge.open{background:#dbf6e2;color:#16773a}
 .status-badge.closed{background:#ffe1e1;color:#a52424}

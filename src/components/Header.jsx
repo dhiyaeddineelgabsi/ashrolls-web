@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import CallModal from './CallModal';
 
 export default function Header() {
   const [status, setStatus] = useState({ open: false, text: 'Vérification...' });
+  const [callOpen, setCallOpen] = useState(false);
 
   useEffect(() => {
     function updateStatus() {
@@ -36,14 +38,18 @@ export default function Header() {
             Contact
           </NavLink>
         </nav>
-        <span
+        <button
+          type="button"
           className={`status-badge ${status.open ? 'open' : 'closed'}`}
           title={status.text}
+          aria-label="Nous appeler"
+          onClick={() => setCallOpen(true)}
         >
           <span className="status-text">{status.text}</span>
           <span className="status-icon" aria-hidden="true">📞</span>
-        </span>
+        </button>
       </div>
+      <CallModal isOpen={callOpen} onClose={() => setCallOpen(false)} />
     </header>
   );
 }
